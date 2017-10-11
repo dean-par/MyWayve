@@ -59,7 +59,7 @@ class HourlyForecast {
         static let windDirection = "swellDir16Point"
         static let period = "swellPeriod_secs"
         static let swellHeight = "swellHeight_m"
-        static let swellDirection = "swellDir"
+        static let swellDirection = "swellDir16Point"
     }
     
     let windEnergy: Double
