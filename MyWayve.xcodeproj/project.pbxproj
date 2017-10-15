@@ -19,6 +19,7 @@
 		A4575A8E1F86445500C1C7CA /* Tide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A8D1F86445500C1C7CA /* Tide.swift */; };
 		A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A921F864FDF00C1C7CA /* ForecastManager.swift */; };
 		A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */; };
+		A49599561F9340F20083E5CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49599551F9340F20083E5CD /* Configuration.swift */; };
 		A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		A4575A8D1F86445500C1C7CA /* Tide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tide.swift; sourceTree = "<group>"; };
 		A4575A921F864FDF00C1C7CA /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		A49599551F9340F20083E5CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E829DFBEDAC18C820ADC8476 /* Pods-MyWayve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */,
+				A49599551F9340F20083E5CD /* Configuration.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				A4575A891F8622EE00C1C7CA /* HourlyForecast.swift in Sources */,
 				A4575A781F861B1F00C1C7CA /* SecondViewController.swift in Sources */,
 				A4575A8E1F86445500C1C7CA /* Tide.swift in Sources */,
+				A49599561F9340F20083E5CD /* Configuration.swift in Sources */,
 				A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */,
 				A4575A761F861B1F00C1C7CA /* FirstViewController.swift in Sources */,
 				A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */,
