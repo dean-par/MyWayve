@@ -20,6 +20,7 @@
 		A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A921F864FDF00C1C7CA /* ForecastManager.swift */; };
 		A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */; };
 		A49599561F9340F20083E5CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49599551F9340F20083E5CD /* Configuration.swift */; };
+		A49F582A1F93737600926FF3 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49F58291F93737600926FF3 /* Alert.storyboard */; };
 		A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		A4575A921F864FDF00C1C7CA /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A49599551F9340F20083E5CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A49F58291F93737600926FF3 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E829DFBEDAC18C820ADC8476 /* Pods-MyWayve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 		A487FE041F8E30F100DCE5D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A49F58291F93737600926FF3 /* Alert.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				A4575A801F861B1F00C1C7CA /* LaunchScreen.storyboard in Resources */,
 				A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */,
 				A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */,
+				A49F582A1F93737600926FF3 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
