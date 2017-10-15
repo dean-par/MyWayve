@@ -12,29 +12,25 @@ import Foundation
 
 class ForecastManager {
     
-    struct Property {
-        static let apiKey = "367bb50e44bb44c887e231804172809"
-    }
-    
-    func fetchForecast(completion: @escaping ([HourlyForecast]?) -> Void) {
+    func fetchForecast(completion: @escaping (MultiDayForecast?) -> Void) {
         Alamofire.request(
             Configuration.forecastURL(for: CLLocationCoordinate2D(latitude: -33.73176, longitude: 151.30146))!,
             method: .get,
             parameters: nil)
             .validate()
             .responseJSON { (response) -> Void in
+                let forecast: MultiDayForecast?
                 switch response.result {
                 case .failure(let error):
                     print(error)
+                    forecast = nil
                 case .success(let data):
                     guard let json = data as? [String : AnyObject],
                         let dataDictionary = json["data"] as? [String : AnyObject]
                         else { return }
-                    print(dataDictionary)
-                    let forecast = MultiDayForecast(with: dataDictionary)
-                    print(forecast?.dailyWeather[2].hourlyForecasts.first?.swellDirection)
+                    forecast = MultiDayForecast(with: dataDictionary)
                 }
-                completion(nil)
+                completion(forecast)
         }
     }
 }

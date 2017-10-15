@@ -12,7 +12,9 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ForecastManager().fetchForecast { _ in }
+        ForecastManager().fetchForecast { forecast in
+            print(forecast?.dailyWeather.first?.date)
+        }
     }
 
     override func didReceiveMemoryWarning() {

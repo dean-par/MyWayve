@@ -31,7 +31,6 @@ class MultiDayForecast {
             else { return nil }
         dailyWeather = forecasts.flatMap { DailyForecast(withDictionary: ($0 as? [String : AnyObject]) ?? [:] )}
         coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        print(dailyWeather.first?.date)
     }
     
 }

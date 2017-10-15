@@ -18,7 +18,7 @@ class Configuration {
         urlComponents.queryItems = [URLQueryItem(name: "key", value: "367bb50e44bb44c887e231804172809"),
                                     URLQueryItem(name: "q", value: "\(coordinate.latitude), \(coordinate.longitude)"),
                                     URLQueryItem(name: "format", value: "json"),
-                                    URLQueryItem(name: "tide", value: "1"),
+                                    URLQueryItem(name: "tide", value: "yes"),
                                     URLQueryItem(name: "includelocation", value: "yes"),
                                     URLQueryItem(name: "tp", value: "1")]
         return urlComponents.url
