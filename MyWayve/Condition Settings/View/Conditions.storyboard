@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Conditions" id="vOs-IP-H9P">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="zPw-Lt-AES">
                             <connections>
-                                <segue destination="5UA-F4-tJE" kind="show" id="wBt-Fs-PpJ"/>
+                                <segue destination="5UA-F4-tJE" kind="show" id="4U7-2c-hxG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="626" y="152"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add-->
         <scene sceneID="dEZ-w8-7lx">
             <objects>
-                <tableViewController id="5UA-F4-tJE" sceneMemberID="viewController">
+                <tableViewController id="5UA-F4-tJE" customClass="SaveConditionsViewController" customModule="MyWayve" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fIi-he-3WJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +269,25 @@
                             <outlet property="delegate" destination="5UA-F4-tJE" id="xxY-BU-ekD"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add" leftItemsSupplementBackButton="YES" id="JH6-gk-jFB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0iq-eh-7qt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Piv-Ut-1L4">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="5UA-F4-tJE" id="Atd-5e-7Jh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="periodMaxTextField" destination="6ZR-YS-zbO" id="0Fd-3G-sCS"/>
+                        <outlet property="periodMinTextField" destination="zRv-r9-otA" id="x5H-3c-mP0"/>
+                        <outlet property="spotTextField" destination="JQE-df-Bre" id="Xdj-Jm-HOn"/>
+                        <outlet property="swellDirectionTextField" destination="LrM-v5-s62" id="xDe-20-MCv"/>
+                        <outlet property="waveHeightMaxTextField" destination="bYs-vZ-p3u" id="7k5-Uc-k2n"/>
+                        <outlet property="waveHeightMinTextField" destination="eL0-2d-Vck" id="Waz-Re-3yj"/>
+                        <outlet property="windDirectionTextField" destination="YkS-r9-8lR" id="2Zg-EO-4Xl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwe-xD-MOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
