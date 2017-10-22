@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7ED7C342DAC4781D0CF0A0D3 /* Pods_MyWayve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */; };
+		A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */; };
+		A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */; };
+		A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */; };
 		A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */; };
 		A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A731F861B1F00C1C7CA /* AppDelegate.swift */; };
 		A4575A761F861B1F00C1C7CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A751F861B1F00C1C7CA /* FirstViewController.swift */; };
-		A4575A781F861B1F00C1C7CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A771F861B1F00C1C7CA /* SecondViewController.swift */; };
+		A4575A781F861B1F00C1C7CA /* SaveConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */; };
 		A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4575A791F861B1F00C1C7CA /* Main.storyboard */; };
 		A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */; };
 		A4575A801F861B1F00C1C7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4575A7E1F861B1F00C1C7CA /* LaunchScreen.storyboard */; };
@@ -20,18 +23,21 @@
 		A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A921F864FDF00C1C7CA /* ForecastManager.swift */; };
 		A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */; };
 		A49599561F9340F20083E5CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49599551F9340F20083E5CD /* Configuration.swift */; };
-		A49F582A1F93737600926FF3 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49F58291F93737600926FF3 /* Alert.storyboard */; };
+		A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49F58291F93737600926FF3 /* GoodConditions.storyboard */; };
 		A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWayve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3425EC49FF5C8B96196854E /* Pods-MyWayve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.debug.xcconfig"; sourceTree = "<group>"; };
+		A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conditions.storyboard; sourceTree = "<group>"; };
+		A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionPickerViewController.swift; sourceTree = "<group>"; };
+		A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypes.swift; sourceTree = "<group>"; };
 		A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayForecast.swift; sourceTree = "<group>"; };
 		A4575A701F861B1F00C1C7CA /* MyWayve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWayve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4575A731F861B1F00C1C7CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4575A751F861B1F00C1C7CA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A4575A771F861B1F00C1C7CA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConditionsViewController.swift; sourceTree = "<group>"; };
 		A4575A7A1F861B1F00C1C7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4575A7F1F861B1F00C1C7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,7 +47,7 @@
 		A4575A921F864FDF00C1C7CA /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A49599551F9340F20083E5CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		A49F58291F93737600926FF3 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		A49F58291F93737600926FF3 /* GoodConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoodConditions.storyboard; sourceTree = "<group>"; };
 		A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E829DFBEDAC18C820ADC8476 /* Pods-MyWayve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +81,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A44B3CEE1F9C652000BCBD6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A49F58291F93737600926FF3 /* GoodConditions.storyboard */,
+				A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A4575A671F861B1F00C1C7CA = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +113,11 @@
 			children = (
 				A487FDFE1F8E2CCB00DCE5D7 /* Util */,
 				A4575A871F8622A500C1C7CA /* Model */,
+				A44B3CEE1F9C652000BCBD6A /* View */,
 				A487FE041F8E30F100DCE5D7 /* Controller */,
 				A4575A731F861B1F00C1C7CA /* AppDelegate.swift */,
 				A4575A751F861B1F00C1C7CA /* FirstViewController.swift */,
-				A4575A771F861B1F00C1C7CA /* SecondViewController.swift */,
+				A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */,
 				A4575A791F861B1F00C1C7CA /* Main.storyboard */,
 				A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */,
 				A4575A7E1F861B1F00C1C7CA /* LaunchScreen.storyboard */,
@@ -127,6 +143,7 @@
 			children = (
 				A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */,
 				A49599551F9340F20083E5CD /* Configuration.swift */,
+				A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -134,7 +151,7 @@
 		A487FE041F8E30F100DCE5D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A49F58291F93737600926FF3 /* Alert.storyboard */,
+				A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,7 +221,8 @@
 				A4575A801F861B1F00C1C7CA /* LaunchScreen.storyboard in Resources */,
 				A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */,
 				A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */,
-				A49F582A1F93737600926FF3 /* Alert.storyboard in Resources */,
+				A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */,
+				A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */,
+				A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */,
 				A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */,
+				A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */,
 				A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */,
 				A4575A891F8622EE00C1C7CA /* HourlyForecast.swift in Sources */,
-				A4575A781F861B1F00C1C7CA /* SecondViewController.swift in Sources */,
+				A4575A781F861B1F00C1C7CA /* SaveConditionsViewController.swift in Sources */,
 				A4575A8E1F86445500C1C7CA /* Tide.swift in Sources */,
 				A49599561F9340F20083E5CD /* Configuration.swift in Sources */,
 				A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */,
