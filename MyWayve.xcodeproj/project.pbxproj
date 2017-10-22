@@ -90,6 +90,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A44B3CF51F9C6FB400BCBD6A /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				A4575A871F8622A500C1C7CA /* Model */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		A44B3CF71F9C6FE600BCBD6A /* Condition Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A487FE041F8E30F100DCE5D7 /* Controller */,
+				A44B3CEE1F9C652000BCBD6A /* View */,
+			);
+			path = "Condition Settings";
+			sourceTree = "<group>";
+		};
 		A4575A671F861B1F00C1C7CA = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				A487FDFE1F8E2CCB00DCE5D7 /* Util */,
-				A4575A871F8622A500C1C7CA /* Model */,
-				A44B3CEE1F9C652000BCBD6A /* View */,
-				A487FE041F8E30F100DCE5D7 /* Controller */,
+				A44B3CF51F9C6FB400BCBD6A /* Forecast */,
+				A44B3CF71F9C6FE600BCBD6A /* Condition Settings */,
 				A4575A731F861B1F00C1C7CA /* AppDelegate.swift */,
 				A4575A751F861B1F00C1C7CA /* FirstViewController.swift */,
-				A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */,
 				A4575A791F861B1F00C1C7CA /* Main.storyboard */,
 				A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */,
 				A4575A7E1F861B1F00C1C7CA /* LaunchScreen.storyboard */,
@@ -151,6 +166,7 @@
 		A487FE041F8E30F100DCE5D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */,
 				A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */,
 			);
 			path = Controller;

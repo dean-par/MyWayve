@@ -223,11 +223,6 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <segue destination="Elf-yf-WPp" kind="popoverPresentation" popoverAnchorView="LrM-v5-s62" id="bdp-Of-GUl">
-                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                        </segue>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
