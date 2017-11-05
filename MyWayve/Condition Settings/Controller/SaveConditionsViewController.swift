@@ -38,7 +38,7 @@ class SaveConditionsViewController: UITableViewController {
                          Condition.Property.windDirection: windDirectionTextField.text]
         let conditions = Condition.init(withDictionary: conditionsDictionary as [String : AnyObject])
         // TODO: To add archiving to Condition in order to save the setting.
-       // PersistentSettingsManager.setValue(conditionsDictionary, for: .condition)
+        StartupSettings.conditions = [conditions]
     }
 
 }

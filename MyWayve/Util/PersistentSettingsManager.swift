@@ -22,4 +22,9 @@ class PersistentSettingsManager: DefaultsHandlerType {
     static var defaults: UserDefaults {
         return UserDefaults.standard
     }
+    
+    static func deleteValue(_ key: PersistentSettingsManager.Key) {
+        defaults.removeObject(forKey: key.rawValue)
+    }
+    
 }
