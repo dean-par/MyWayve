@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7ED7C342DAC4781D0CF0A0D3 /* Pods_MyWayve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */; };
+		A4492CBF201354C100F39A3D /* Spot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4492CBE201354C100F39A3D /* Spot.storyboard */; };
 		A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */; };
 		A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */; };
 		A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */; };
 		A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */; };
 		A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A731F861B1F00C1C7CA /* AppDelegate.swift */; };
-		A4575A761F861B1F00C1C7CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A751F861B1F00C1C7CA /* FirstViewController.swift */; };
+		A4575A761F861B1F00C1C7CA /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A751F861B1F00C1C7CA /* SpotViewController.swift */; };
 		A4575A781F861B1F00C1C7CA /* SaveConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */; };
 		A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4575A791F861B1F00C1C7CA /* Main.storyboard */; };
 		A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */; };
@@ -35,13 +36,14 @@
 /* Begin PBXFileReference section */
 		746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWayve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3425EC49FF5C8B96196854E /* Pods-MyWayve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.debug.xcconfig"; sourceTree = "<group>"; };
+		A4492CBE201354C100F39A3D /* Spot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spot.storyboard; sourceTree = "<group>"; };
 		A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conditions.storyboard; sourceTree = "<group>"; };
 		A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionPickerViewController.swift; sourceTree = "<group>"; };
 		A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypes.swift; sourceTree = "<group>"; };
 		A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayForecast.swift; sourceTree = "<group>"; };
 		A4575A701F861B1F00C1C7CA /* MyWayve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWayve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4575A731F861B1F00C1C7CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4575A751F861B1F00C1C7CA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A4575A751F861B1F00C1C7CA /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		A4575A771F861B1F00C1C7CA /* SaveConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConditionsViewController.swift; sourceTree = "<group>"; };
 		A4575A7A1F861B1F00C1C7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,39 @@
 				E829DFBEDAC18C820ADC8476 /* Pods-MyWayve.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4492CBA2013547500F39A3D /* Spot */ = {
+			isa = PBXGroup;
+			children = (
+				A4492CBD2013549000F39A3D /* View */,
+				A4492CBC2013548B00F39A3D /* Controller */,
+				A4492CBB2013548300F39A3D /* Model */,
+			);
+			path = Spot;
+			sourceTree = "<group>";
+		};
+		A4492CBB2013548300F39A3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4492CBC2013548B00F39A3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4575A751F861B1F00C1C7CA /* SpotViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4492CBD2013549000F39A3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4492CBE201354C100F39A3D /* Spot.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A44B3CEE1F9C652000BCBD6A /* View */ = {
@@ -142,8 +177,8 @@
 				A487FDFE1F8E2CCB00DCE5D7 /* Util */,
 				A44B3CF51F9C6FB400BCBD6A /* Forecast */,
 				A44B3CF71F9C6FE600BCBD6A /* Condition Settings */,
+				A4492CBA2013547500F39A3D /* Spot */,
 				A4575A731F861B1F00C1C7CA /* AppDelegate.swift */,
-				A4575A751F861B1F00C1C7CA /* FirstViewController.swift */,
 				A4575A791F861B1F00C1C7CA /* Main.storyboard */,
 				A4575A7C1F861B1F00C1C7CA /* Assets.xcassets */,
 				A4575A7E1F861B1F00C1C7CA /* LaunchScreen.storyboard */,
@@ -261,6 +296,7 @@
 				A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */,
 				A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */,
 				A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */,
+				A4492CBF201354C100F39A3D /* Spot.storyboard in Resources */,
 				A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +379,7 @@
 				A4EAF8E21F9C79A900B2D413 /* DefaultsHandlerType.swift in Sources */,
 				A49599561F9340F20083E5CD /* Configuration.swift in Sources */,
 				A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */,
-				A4575A761F861B1F00C1C7CA /* FirstViewController.swift in Sources */,
+				A4575A761F861B1F00C1C7CA /* SpotViewController.swift in Sources */,
 				A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
