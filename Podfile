@@ -6,5 +6,7 @@ target 'MyWayve' do
   use_frameworks!
   pod 'Alamofire', '~> 4.5'
   pod 'CocoaLumberjack/Swift', '~> 3.2'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

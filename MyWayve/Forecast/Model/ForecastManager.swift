@@ -12,9 +12,9 @@ import Foundation
 
 class ForecastManager {
     
-    func fetchForecast(completion: @escaping (MultiDayForecast?) -> Void) {
+    func fetchForecast(coordinate: CLLocationCoordinate2D, completion: @escaping (MultiDayForecast?) -> Void) {
         Alamofire.request(
-            Configuration.forecastURL(for: CLLocationCoordinate2D(latitude: -33.73176, longitude: 151.30146))!,
+            Configuration.forecastURL(for: coordinate)!,
             method: .get,
             parameters: nil)
             .validate()
