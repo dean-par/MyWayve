@@ -19,14 +19,11 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     
-    
-    
     var currentHour: Int {
         let dateFormatter = DateFormatter()
         let hourOfDay = Date()
         dateFormatter.dateFormat = "HH"
-        // Dividing by 3 since the hours are separated into eights.
-        let currentHour = (Int(dateFormatter.string(from: hourOfDay)) ?? 0) / 3
+        let currentHour = (Int(dateFormatter.string(from: hourOfDay)))!
         return currentHour
     }
     
