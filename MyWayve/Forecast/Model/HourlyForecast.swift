@@ -56,7 +56,7 @@ class HourlyForecast {
     
     fileprivate struct Property {
         static let windEnergy = "WindGustKmph"
-        static let windDirection = "swellDir16Point"
+        static let windDirection = "winddir16Point"
         static let period = "swellPeriod_secs"
         static let swellHeight = "swellHeight_m"
         static let swellDirection = "swellDir16Point"

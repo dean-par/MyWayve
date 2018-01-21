@@ -11,9 +11,9 @@ import Foundation
 class WeatherTypes {
     
     enum Direction: String {
-        case N, NNE, NE, NEE, E, SEE, SE, SSE, S, SSW, SW, SWW, W, NWW, NW, NNW
+        case N, NNE, NE, ENE, E, ESE, SE, SSE, S, WSW, SW, SWW, W, WNW, NW, NNW
         
-        static let allValues = ["N", "NNE", "NE", "NEE", "E", "SEE", "SE", "SSE", "S", "SSW", "SW", "SWW", "W", "NWW", "NW", "NNW"]
+        static let allValues = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
     }
     
 }
