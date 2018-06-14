@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7ED7C342DAC4781D0CF0A0D3 /* Pods_MyWayve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */; };
 		A4492CBF201354C100F39A3D /* Spot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4492CBE201354C100F39A3D /* Spot.storyboard */; };
+		A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449AB2820CBD5F6005F2402 /* Weather.swift */; };
 		A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */; };
 		A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */; };
 		A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */; };
@@ -37,6 +38,7 @@
 		746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWayve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3425EC49FF5C8B96196854E /* Pods-MyWayve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.debug.xcconfig"; sourceTree = "<group>"; };
 		A4492CBE201354C100F39A3D /* Spot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spot.storyboard; sourceTree = "<group>"; };
+		A449AB2820CBD5F6005F2402 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conditions.storyboard; sourceTree = "<group>"; };
 		A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionPickerViewController.swift; sourceTree = "<group>"; };
 		A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypes.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				A4575A881F8622EE00C1C7CA /* HourlyForecast.swift */,
 				A4575A8D1F86445500C1C7CA /* Tide.swift */,
 				A4575A921F864FDF00C1C7CA /* ForecastManager.swift */,
+				A449AB2820CBD5F6005F2402 /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */,
 				A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */,
 				A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */,
+				A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */,
 				A4B291831FA5C463002AFD0C /* StartupSettings.swift in Sources */,
 				A4EAF8E61F9C7A7F00B2D413 /* Condition.swift in Sources */,
 				A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */,
