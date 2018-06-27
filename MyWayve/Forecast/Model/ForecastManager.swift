@@ -12,7 +12,7 @@ import Foundation
 
 class ForecastManager: NSObject {
     
-    func fetchWeather(coordinate: CLLocationCoordinate2D) {
+    func fetchWeather(coordinate: CLLocationCoordinate2D, completionHandler: @escaping ([Weather]) -> Void ) {
         // Set up the URL request
 
         let urlRequest = NSURLRequest(url: Configuration.forecastURL(for: coordinate)!)
@@ -26,8 +26,7 @@ class ForecastManager: NSObject {
             if data != nil {
                 do {
                     let weather = try JSONDecoder().decode(WeatherData.self, from: data!)
-                    print("test:\(weather.data.weather.first?.maxtempC)")
-                    
+                    completionHandler(weather.data.weather)
                 } catch {
                     print(error)
                 }
@@ -39,8 +38,10 @@ class ForecastManager: NSObject {
         task.resume()
     }
     
-    func fetchForecast(coordinate: CLLocationCoordinate2D, completion: @escaping (MultiDayForecast?) -> Void) {
-        fetchWeather(coordinate: coordinate)
+    func fetchForecast(coordinate: CLLocationCoordinate2D, completion: @escaping ([Weather]) -> Void) {
+        fetchWeather(coordinate: coordinate) { weather in
+            completion(weather)
+        }
         //return MultiDayForecast(with: [ : ])
 //        Alamofire.request(
 //            Configuration.forecastURL(for: coordinate)!,
