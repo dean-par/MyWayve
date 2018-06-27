@@ -13,8 +13,8 @@ struct WeatherData: Codable {
 }
 
 struct WeatherDetail: Codable {
-    let request: Request
-    let weather: Weather
+    let request: [Request]
+    let weather: [Weather]
 }
 
 struct Request: Codable {
@@ -32,10 +32,6 @@ struct Weather: Codable {
     let tides: [Tide]
     let hourly: [HourlyWeather]
     
-    enum CodingKeys: String, CodingKey {
-        case date, astronomy, maxtempC, maxtempF, mintempC, mintempF, tides = "tide_data", hourly
-    }
-    
 }
 
 struct Astronomy: Codable {
@@ -44,7 +40,7 @@ struct Astronomy: Codable {
     let moonrise: String
     let moonset: String
     let moonPhase: String
-    let moonIllumination: Int
+    let moonIllumination: String
     
     enum CodingKeys: String, CodingKey {
         case sunset, moonrise, moonset, moonPhase = "moon_phase", moonIllumination = "moon_illumination"
@@ -52,10 +48,18 @@ struct Astronomy: Codable {
 }
 
 struct Tide: Codable {
+    let tideData: [TideData]
+    
+    enum CodingKeys: String, CodingKey {
+        case tideData = "tide_data"
+    }
+}
+
+struct TideData: Codable {
     
     let tideTime: String
     let tideHeightInMetres: String
-    let tideDateTime: Date
+    let tideDateTime: String
     let tideType: String
     
     enum CodingKeys: String, CodingKey {

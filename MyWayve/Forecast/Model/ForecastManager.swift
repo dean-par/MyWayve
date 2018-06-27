@@ -6,11 +6,11 @@
 //  Copyright © 2017 DeanParreno. All rights reserved.
 //
 
-import Alamofire
+//import Alamofire
 import CoreLocation
 import Foundation
 
-class ForecastManager {
+class ForecastManager: NSObject {
     
     func fetchWeather(coordinate: CLLocationCoordinate2D) {
         // Set up the URL request
@@ -23,12 +23,14 @@ class ForecastManager {
         // make the request
         let task = session.dataTask(with: urlRequest as URLRequest, completionHandler: { (data, response, error) in
             // do stuff with response, data & error here
-            do {
-                let weather = try JSONDecoder().decode(WeatherData.self, from: data!)
-                print(weather)
-
-            } catch {
-                
+            if data != nil {
+                do {
+                    let weather = try JSONDecoder().decode(WeatherData.self, from: data!)
+                    print("test:\(weather.data.weather.first?.maxtempC)")
+                    
+                } catch {
+                    print(error)
+                }
             }
           
             print(error)
