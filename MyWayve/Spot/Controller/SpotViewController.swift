@@ -54,14 +54,15 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
     
     private func loadForecast(coordinate: CLLocationCoordinate2D) {
         ForecastManager().fetchForecast(coordinate: coordinate) { forecast in
-            let weatherNow = forecast.first?.hourly.first
-            //self.spotLabel.text = String(describing: forecast.coordinate.latitude) + ", " + String(describing: forecast.coordinate.longitude)
-            self.swellHeightLabel.text = String(describing: weatherNow?.swellHeight_m)
-            self.swellDirectionLabel.text = String(describing: weatherNow?.swellDir)
-            self.periodLabel.text = String(describing: weatherNow?.swellPeriod_secs)
-            self.windEnergyLabel.text = String(describing: weatherNow?.windspeedKmph) + " kmph"
-            self.windDirectionLabel.text = String(describing: weatherNow?.winddir16Point)
-            self.tableView.reloadData()
+            if let weatherNow = forecast.first?.hourly.first {
+                //self.spotLabel.text = String(describing: forecast.coordinate.latitude) + ", " + String(describing: forecast.coordinate.longitude)
+                self.swellHeightLabel.text = weatherNow.swellHeight_m
+                self.swellDirectionLabel.text = weatherNow.swellDir
+                self.periodLabel.text = weatherNow.swellPeriod_secs
+                self.windEnergyLabel.text = weatherNow.windspeedKmph + " kmph"
+                self.windDirectionLabel.text = weatherNow.winddir16Point
+                self.tableView.reloadData()
+            }
         }
     }
   
