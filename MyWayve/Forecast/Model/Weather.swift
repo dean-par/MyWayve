@@ -69,39 +69,40 @@ struct TideData: Codable {
 }
 
 struct HourlyWeather: Codable {
-    let time: Int
-    let tempC: Int
-    let tempF: Int
-    let windspeedMiles: Int
-    let windspeedKmph: Int
-    let winddirDegree: Int
+    // TODO: make the type appropriate instead of all strings.
+    let time: String
+    let tempC: String
+    let tempF: String
+    let windspeedMiles: String
+    let windspeedKmph: String
+    let winddirDegree: String
     let winddir16Point: String
     let weatherCode: String
     let weatherIconUrl: [WeatherIcon]
     let weatherDesc: [WeatherDescription]
-    let precipMM: Double
-    let humidity: Int
-    let pressure: Int
-    let visibility: Int
-    let cloudcover: Int
-    let HeatIndexC: Int
-    let HeatIndexF: Int
-    let DewPointC: Int
-    let DewPointF: Int
-    let WindChillC: Int
-    let WindChillF: Int
-    let WindGustMiles: Int
-    let WindGustKmph: Int
-    let FeelsLikeC: Int
-    let FeelsLikeF: Int
-    let sigHeight_m: Double
-    let swellHeight_m: Double
-    let swellHeight_ft: Double
-    let swellDir: Int
+    let precipMM: String
+    let humidity: String
+    let pressure: String
+    let visibility: String
+    let cloudcover: String
+    let HeatIndexC: String
+    let HeatIndexF: String
+    let DewPointC: String
+    let DewPointF: String
+    let WindChillC: String
+    let WindChillF: String
+    let WindGustMiles: String
+    let WindGustKmph: String
+    let FeelsLikeC: String
+    let FeelsLikeF: String
+    let sigHeight_m: String
+    let swellHeight_m: String
+    let swellHeight_ft: String
+    let swellDir: String
     let swellDir16Point: String
-    let swellPeriod_secs: Double
-    let waterTemp_C: Int
-    let waterTemp_F: Int
+    let swellPeriod_secs: String
+    let waterTemp_C: String
+    let waterTemp_F: String
 }
 
 struct WeatherIcon: Codable {
