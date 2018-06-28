@@ -14,12 +14,35 @@ struct WeatherData: Codable {
 
 struct WeatherDetail: Codable {
     let request: [Request]
+    let nearestArea: [NearestArea]
     let weather: [Weather]
+    
+    enum CodingKeys: String, CodingKey {
+        case request, nearestArea = "nearest_area", weather
+    }
 }
 
 struct Request: Codable {
     let type: String
     let query: String
+}
+
+struct NearestArea: Codable {
+    //    "nearest_area":[{"latitude":"-34.183","longitude":"151.150","distance_miles":"-999.0"}],
+    let latitude: Double
+    let longitude: Double
+    let distanceInMiles: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case latitude, longitude, distanceInMiles = "distance_miles"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        latitude = Double(try container.decode(String.self, forKey: .latitude)) ?? 0.0
+        longitude = Double(try container.decode(String.self, forKey: .longitude)) ?? 0.0
+        distanceInMiles = Double(try container.decode(String.self, forKey: .distanceInMiles)) ?? 0.0
+    }
 }
 
 struct Weather: Codable {
@@ -31,7 +54,6 @@ struct Weather: Codable {
     let mintempF: String
     let tides: [Tide]
     let hourly: [HourlyWeather]
-    
 }
 
 struct Astronomy: Codable {
@@ -70,39 +92,76 @@ struct TideData: Codable {
 
 struct HourlyWeather: Codable {
     // TODO: make the type appropriate instead of all strings.
-    let time: String
-    let tempC: String
-    let tempF: String
-    let windspeedMiles: String
-    let windspeedKmph: String
-    let winddirDegree: String
+    let time: Int
+    let tempC: Int
+    let tempF: Int
+    let windspeedMiles: Int
+    let windspeedKmph: Int
+    let winddirDegree: Int
     let winddir16Point: String
-    let weatherCode: String
+    let weatherCode: Int
     let weatherIconUrl: [WeatherIcon]
     let weatherDesc: [WeatherDescription]
-    let precipMM: String
-    let humidity: String
-    let pressure: String
-    let visibility: String
-    let cloudcover: String
-    let HeatIndexC: String
-    let HeatIndexF: String
-    let DewPointC: String
-    let DewPointF: String
-    let WindChillC: String
-    let WindChillF: String
-    let WindGustMiles: String
-    let WindGustKmph: String
-    let FeelsLikeC: String
-    let FeelsLikeF: String
-    let sigHeight_m: String
-    let swellHeight_m: String
-    let swellHeight_ft: String
-    let swellDir: String
+    let precipMM: Double
+    let humidity: Int
+    let pressure: Int
+    let visibility: Int
+    let cloudcover: Int
+    let HeatIndexC: Int
+    let HeatIndexF: Int
+    let DewPointC: Int
+    let DewPointF: Int
+    let WindChillC: Int
+    let WindChillF: Int
+    let WindGustMiles: Int
+    let WindGustKmph: Int
+    let FeelsLikeC: Int
+    let FeelsLikeF: Int
+    let sigHeight_m: Double
+    let swellHeight_m: Double
+    let swellHeight_ft: Double
+    let swellDir: Int
     let swellDir16Point: String
-    let swellPeriod_secs: String
-    let waterTemp_C: String
-    let waterTemp_F: String
+    let swellPeriod_secs: Double
+    let waterTemp_C: Int
+    let waterTemp_F: Int
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        time = Int(try container.decode(String.self, forKey: .time)) ?? 0
+        tempC = Int(try container.decode(String.self, forKey: .tempC)) ?? 0
+        tempF = Int(try container.decode(String.self, forKey: .tempF)) ?? 0
+        windspeedMiles = Int(try container.decode(String.self, forKey: .windspeedMiles)) ?? 0
+        windspeedKmph = Int(try container.decode(String.self, forKey: .windspeedKmph)) ?? 0
+        winddirDegree = Int(try container.decode(String.self, forKey: .winddirDegree)) ?? 0
+        winddir16Point = try container.decode(String.self, forKey: .winddir16Point)
+        weatherCode = Int(try container.decode(String.self, forKey: .weatherCode)) ?? 0
+        weatherIconUrl = try container.decode([WeatherIcon].self, forKey: .weatherIconUrl)
+        weatherDesc = try container.decode([WeatherDescription].self, forKey: .weatherDesc)
+        precipMM = Double(try container.decode(String.self, forKey: .precipMM)) ?? 0.0
+        humidity = Int(try container.decode(String.self, forKey: .humidity)) ?? 0
+        pressure = Int(try container.decode(String.self, forKey: .pressure)) ?? 0
+        visibility = Int(try container.decode(String.self, forKey: .visibility)) ?? 0
+        cloudcover = Int(try container.decode(String.self, forKey: .cloudcover)) ?? 0
+        HeatIndexC = Int(try container.decode(String.self, forKey: .HeatIndexC)) ?? 0
+        HeatIndexF = Int(try container.decode(String.self, forKey: .HeatIndexF)) ?? 0
+        DewPointC = Int(try container.decode(String.self, forKey: .DewPointC)) ?? 0
+        DewPointF = Int(try container.decode(String.self, forKey: .DewPointF)) ?? 0
+        WindChillC = Int(try container.decode(String.self, forKey: .WindChillC)) ?? 0
+        WindChillF = Int(try container.decode(String.self, forKey: .WindChillF)) ?? 0
+        WindGustMiles = Int(try container.decode(String.self, forKey: .WindGustMiles)) ?? 0
+        WindGustKmph = Int(try container.decode(String.self, forKey: .WindGustKmph)) ?? 0
+        FeelsLikeC = Int(try container.decode(String.self, forKey: .FeelsLikeC)) ?? 0
+        FeelsLikeF = Int(try container.decode(String.self, forKey: .FeelsLikeF)) ?? 0
+        sigHeight_m = Double(try container.decode(String.self, forKey: .sigHeight_m)) ?? 0.0
+        swellHeight_m = Double(try container.decode(String.self, forKey: .swellHeight_m)) ?? 0.0
+        swellHeight_ft = Double(try container.decode(String.self, forKey: .swellHeight_ft)) ?? 0.0
+        swellDir = Int(try container.decode(String.self, forKey: .swellDir)) ?? 0
+        swellDir16Point = try container.decode(String.self, forKey: .swellDir16Point)
+        swellPeriod_secs = Double(try container.decode(String.self, forKey: .swellPeriod_secs)) ?? 0.0
+        waterTemp_C = Int(try container.decode(String.self, forKey: .waterTemp_C)) ?? 0
+        waterTemp_F = Int(try container.decode(String.self, forKey: .waterTemp_F)) ?? 0
+    }
 }
 
 struct WeatherIcon: Codable {

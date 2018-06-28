@@ -19,6 +19,8 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    
     var currentHour: Int {
         let dateFormatter = DateFormatter()
         let hourOfDay = Date()
@@ -29,7 +31,6 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
@@ -43,34 +44,41 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        // Load default location of Sydney.
         loadForecast(coordinate: CLLocationCoordinate2D(latitude: -33.73176, longitude: 151.30146))
-
-
     }
     
     private func loadForecast(coordinate: CLLocationCoordinate2D) {
-        ForecastManager().fetchForecast(coordinate: coordinate) { forecast in
-            if let weatherNow = forecast.first?.hourly.first {
-                //self.spotLabel.text = String(describing: forecast.coordinate.latitude) + ", " + String(describing: forecast.coordinate.longitude)
-                self.swellHeightLabel.text = weatherNow.swellHeight_m
-                self.swellDirectionLabel.text = weatherNow.swellDir
-                self.periodLabel.text = weatherNow.swellPeriod_secs
-                self.windEnergyLabel.text = weatherNow.windspeedKmph + " kmph"
-                self.windDirectionLabel.text = weatherNow.winddir16Point
-                self.tableView.reloadData()
+        tableView.addSubview(activityIndicator)
+        activityIndicator.frame = tableView.bounds
+        activityIndicator.startAnimating()
+        ForecastManager().fetchWeather(coordinate: coordinate, completionHandler: { weatherDetail in
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self else { return }
+                
+                if let hourlyWeather = weatherDetail.weather.first?.hourly.first {
+                    strongSelf.spotLabel.text = String(weatherDetail.nearestArea.first!.latitude) + ", " + String(weatherDetail.nearestArea.first!.latitude)
+                    strongSelf.swellHeightLabel.text = String(hourlyWeather.swellHeight_m)
+                    strongSelf.swellDirectionLabel.text = String(hourlyWeather.swellDir)
+                    strongSelf.periodLabel.text = String(hourlyWeather.swellPeriod_secs)
+                    strongSelf.windEnergyLabel.text = String(hourlyWeather.windspeedKmph) + " kmph"
+                    strongSelf.windDirectionLabel.text = hourlyWeather.winddir16Point
+                    strongSelf.tableView.reloadData()
+                    strongSelf.activityIndicator.removeFromSuperview()
+                }
             }
+        }) { error in
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self else { return }
+                strongSelf.activityIndicator.removeFromSuperview()
+            }
+            print(error)
         }
     }
   
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         loadForecast(coordinate: coordinate)
     }
-
-    
 
 }
 
