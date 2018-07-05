@@ -52,7 +52,7 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
         tableView.addSubview(activityIndicator)
         activityIndicator.frame = tableView.bounds
         activityIndicator.startAnimating()
-        ForecastManager().fetchWeather(coordinate: coordinate, completionHandler: { weatherDetail in
+        ForecastManager.shared.fetchWeather(coordinate: coordinate, completionHandler: { weatherDetail in
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else { return }
                 

@@ -56,16 +56,18 @@ struct Weather: Codable {
     let hourly: [HourlyWeather]
 }
 
+// Astronomy is only available for the first 4 days.
+// Otherwise, nil values will be returned.
 struct Astronomy: Codable {
-    
-    let sunset: String
-    let moonrise: String
-    let moonset: String
-    let moonPhase: String
-    let moonIllumination: String
+    let sunrise: String?
+    let sunset: String?
+    let moonrise: String?
+    let moonset: String?
+    let moonPhase: String?
+    let moonIllumination: String?
     
     enum CodingKeys: String, CodingKey {
-        case sunset, moonrise, moonset, moonPhase = "moon_phase", moonIllumination = "moon_illumination"
+        case sunrise, sunset, moonrise, moonset, moonPhase = "moon_phase", moonIllumination = "moon_illumination"
     }
 }
 

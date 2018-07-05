@@ -12,6 +12,10 @@ import Foundation
 
 class ForecastManager {
     
+    static let shared = {
+        return ForecastManager()
+    }()
+    
     func fetchWeather(coordinate: CLLocationCoordinate2D, completionHandler: @escaping (WeatherDetail) -> Void, errorHandler: @escaping (Error) -> Void) {
         // Set up the URL request
         let urlRequest = NSURLRequest(url: Configuration.forecastURL(for: coordinate)!)
