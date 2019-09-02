@@ -313,7 +313,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyWayve/Pods-MyWayve-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -324,7 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyWayve/Pods-MyWayve-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		67D60814D79ADCACF90BC0B4 /* [CP] Embed Pods Frameworks */ = {
@@ -333,7 +333,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyWayve/Pods-MyWayve-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 			);
@@ -344,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyWayve/Pods-MyWayve-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF9B7081D7A70BE250C691E4 /* [CP] Check Pods Manifest.lock */ = {
