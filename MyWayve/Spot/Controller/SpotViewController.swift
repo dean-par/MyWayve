@@ -52,27 +52,21 @@ class SpotViewController: UITableViewController, GMSMapViewDelegate {
         tableView.addSubview(activityIndicator)
         activityIndicator.frame = tableView.bounds
         activityIndicator.startAnimating()
-        ForecastManager.shared.fetchWeather(coordinate: coordinate, completionHandler: { weatherDetail in
+        ForecastHandler.fetchForecast(coordinate: coordinate) { weatherDetail in
             DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self else { return }
-                
+                guard let self = self else { return }
+                self.activityIndicator.removeFromSuperview()
+                guard let weatherDetail = weatherDetail else { return }
                 if let hourlyWeather = weatherDetail.weather.first?.hourly.first {
-                    strongSelf.spotLabel.text = String(weatherDetail.nearestArea.first!.latitude) + ", " + String(weatherDetail.nearestArea.first!.latitude)
-                    strongSelf.swellHeightLabel.text = String(hourlyWeather.swellHeight_m)
-                    strongSelf.swellDirectionLabel.text = String(hourlyWeather.swellDir)
-                    strongSelf.periodLabel.text = String(hourlyWeather.swellPeriod_secs)
-                    strongSelf.windEnergyLabel.text = String(hourlyWeather.windspeedKmph) + " kmph"
-                    strongSelf.windDirectionLabel.text = hourlyWeather.winddir16Point
-                    strongSelf.tableView.reloadData()
-                    strongSelf.activityIndicator.removeFromSuperview()
+                    self.spotLabel.text = String(weatherDetail.nearestArea.first!.latitude) + ", " + String(weatherDetail.nearestArea.first!.latitude)
+                    self.swellHeightLabel.text = String(hourlyWeather.swellHeight_m)
+                    self.swellDirectionLabel.text = String(hourlyWeather.swellDir)
+                    self.periodLabel.text = String(hourlyWeather.swellPeriod_secs)
+                    self.windEnergyLabel.text = String(hourlyWeather.windspeedKmph) + " kmph"
+                    self.windDirectionLabel.text = hourlyWeather.winddir16Point
+                    self.tableView.reloadData()
                 }
             }
-        }) { error in
-            DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.activityIndicator.removeFromSuperview()
-            }
-            print(error)
         }
     }
   

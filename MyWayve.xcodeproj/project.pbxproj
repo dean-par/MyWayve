@@ -22,7 +22,7 @@
 		A4575A801F861B1F00C1C7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4575A7E1F861B1F00C1C7CA /* LaunchScreen.storyboard */; };
 		A4575A891F8622EE00C1C7CA /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A881F8622EE00C1C7CA /* HourlyForecast.swift */; };
 		A4575A8E1F86445500C1C7CA /* Tide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A8D1F86445500C1C7CA /* Tide.swift */; };
-		A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A921F864FDF00C1C7CA /* ForecastManager.swift */; };
+		A4575A931F864FDF00C1C7CA /* ForecastHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A921F864FDF00C1C7CA /* ForecastHandler.swift */; };
 		A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */; };
 		A49599561F9340F20083E5CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49599551F9340F20083E5CD /* Configuration.swift */; };
 		A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49F58291F93737600926FF3 /* GoodConditions.storyboard */; };
@@ -53,7 +53,7 @@
 		A4575A811F861B1F00C1C7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4575A881F8622EE00C1C7CA /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
 		A4575A8D1F86445500C1C7CA /* Tide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tide.swift; sourceTree = "<group>"; };
-		A4575A921F864FDF00C1C7CA /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
+		A4575A921F864FDF00C1C7CA /* ForecastHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHandler.swift; sourceTree = "<group>"; };
 		A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A49599551F9340F20083E5CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A49F58291F93737600926FF3 /* GoodConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoodConditions.storyboard; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 				A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */,
 				A4575A881F8622EE00C1C7CA /* HourlyForecast.swift */,
 				A4575A8D1F86445500C1C7CA /* Tide.swift */,
-				A4575A921F864FDF00C1C7CA /* ForecastManager.swift */,
 				A449AB2820CBD5F6005F2402 /* Weather.swift */,
+				A4575A921F864FDF00C1C7CA /* ForecastHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */,
 				A4B291831FA5C463002AFD0C /* StartupSettings.swift in Sources */,
 				A4EAF8E61F9C7A7F00B2D413 /* Condition.swift in Sources */,
-				A4575A931F864FDF00C1C7CA /* ForecastManager.swift in Sources */,
+				A4575A931F864FDF00C1C7CA /* ForecastHandler.swift in Sources */,
 				A4575A891F8622EE00C1C7CA /* HourlyForecast.swift in Sources */,
 				A4575A781F861B1F00C1C7CA /* SaveConditionsViewController.swift in Sources */,
 				A4EAF8E41F9C7A3A00B2D413 /* PersistentSettingsManager.swift in Sources */,
