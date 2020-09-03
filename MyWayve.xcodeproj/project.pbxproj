@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7ED7C342DAC4781D0CF0A0D3 /* Pods_MyWayve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */; };
+		A4449BEF2500DCC50030B995 /* ConditionMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4449BEE2500DCC50030B995 /* ConditionMetric.swift */; };
+		A4449BF12500DD9E0030B995 /* SaveConditionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4449BF02500DD9E0030B995 /* SaveConditionsViewModel.swift */; };
+		A4449BF32500DE190030B995 /* ConditionMetricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4449BF22500DE190030B995 /* ConditionMetricCell.xib */; };
+		A4449BF52500DEC60030B995 /* ConditionMetricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4449BF42500DEC60030B995 /* ConditionMetricCell.swift */; };
 		A4492CBF201354C100F39A3D /* Spot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4492CBE201354C100F39A3D /* Spot.storyboard */; };
 		A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449AB2820CBD5F6005F2402 /* Weather.swift */; };
 		A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */; };
@@ -37,6 +41,10 @@
 /* Begin PBXFileReference section */
 		746A54B78D01D6CD490BCC5C /* Pods_MyWayve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWayve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3425EC49FF5C8B96196854E /* Pods-MyWayve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.debug.xcconfig"; sourceTree = "<group>"; };
+		A4449BEE2500DCC50030B995 /* ConditionMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionMetric.swift; sourceTree = "<group>"; };
+		A4449BF02500DD9E0030B995 /* SaveConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConditionsViewModel.swift; sourceTree = "<group>"; };
+		A4449BF22500DE190030B995 /* ConditionMetricCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionMetricCell.xib; sourceTree = "<group>"; };
+		A4449BF42500DEC60030B995 /* ConditionMetricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionMetricCell.swift; sourceTree = "<group>"; };
 		A4492CBE201354C100F39A3D /* Spot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spot.storyboard; sourceTree = "<group>"; };
 		A449AB2820CBD5F6005F2402 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conditions.storyboard; sourceTree = "<group>"; };
@@ -95,6 +103,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4449BED2500DCA50030B995 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4449BF02500DD9E0030B995 /* SaveConditionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A4492CBA2013547500F39A3D /* Spot */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,8 @@
 			children = (
 				A49F58291F93737600926FF3 /* GoodConditions.storyboard */,
 				A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */,
+				A4449BF22500DE190030B995 /* ConditionMetricCell.xib */,
+				A4449BF42500DEC60030B995 /* ConditionMetricCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +166,7 @@
 		A44B3CF71F9C6FE600BCBD6A /* Condition Settings */ = {
 			isa = PBXGroup;
 			children = (
+				A4449BED2500DCA50030B995 /* ViewModel */,
 				A4EAF8DD1F9C792600B2D413 /* Model */,
 				A487FE041F8E30F100DCE5D7 /* Controller */,
 				A44B3CEE1F9C652000BCBD6A /* View */,
@@ -229,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				A4EAF8E51F9C7A7F00B2D413 /* Condition.swift */,
+				A4449BEE2500DCC50030B995 /* ConditionMetric.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +319,7 @@
 				A4575A7D1F861B1F00C1C7CA /* Assets.xcassets in Resources */,
 				A4575A7B1F861B1F00C1C7CA /* Main.storyboard in Resources */,
 				A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */,
+				A4449BF32500DE190030B995 /* ConditionMetricCell.xib in Resources */,
 				A4492CBF201354C100F39A3D /* Spot.storyboard in Resources */,
 				A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */,
 			);
@@ -372,12 +393,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4449BEF2500DCC50030B995 /* ConditionMetric.swift in Sources */,
 				A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */,
 				A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */,
 				A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */,
 				A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */,
 				A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */,
 				A4B291831FA5C463002AFD0C /* StartupSettings.swift in Sources */,
+				A4449BF52500DEC60030B995 /* ConditionMetricCell.swift in Sources */,
 				A4EAF8E61F9C7A7F00B2D413 /* Condition.swift in Sources */,
 				A4575A931F864FDF00C1C7CA /* ForecastHandler.swift in Sources */,
 				A4575A891F8622EE00C1C7CA /* HourlyForecast.swift in Sources */,
@@ -388,6 +411,7 @@
 				A4EAF8E21F9C79A900B2D413 /* DefaultsHandlerType.swift in Sources */,
 				A49599561F9340F20083E5CD /* Configuration.swift in Sources */,
 				A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */,
+				A4449BF12500DD9E0030B995 /* SaveConditionsViewModel.swift in Sources */,
 				A4575A761F861B1F00C1C7CA /* SpotViewController.swift in Sources */,
 				A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */,
 			);
@@ -528,7 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WX3AY26RV;
+				DEVELOPMENT_TEAM = 34B4V7U2QV;
 				INFOPLIST_FILE = MyWayve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DeanParreno.MyWayve;
@@ -544,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WX3AY26RV;
+				DEVELOPMENT_TEAM = 34B4V7U2QV;
 				INFOPLIST_FILE = MyWayve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DeanParreno.MyWayve;
