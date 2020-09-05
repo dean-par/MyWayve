@@ -34,16 +34,12 @@ class SaveConditionsViewController: UITableViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-//        let conditionsDictionary = [Condition.Property.spot: spotTextField.text,
-//                         Condition.Property.waveHeightMin: waveHeightMinTextField.text,
-//                         Condition.Property.waveHeightMax: waveHeightMaxTextField.text,
-//                         Condition.Property.periodMin: periodMinTextField.text,
-//                         Condition.Property.periodMax: periodMaxTextField.text,
-//                         Condition.Property.swellDirection: swellDirectionTextField.text,
-//                         Condition.Property.windDirection: windDirectionTextField.text]
-//        let conditions = Condition.init(withDictionary: conditionsDictionary as [String : AnyObject])
-//        // TODO: To add archiving to Condition in order to save the setting.
-//        StartupSettings.conditions = [conditions]
+        var conditionDictionary: [ConditionMetric: String] = [:]
+        for metric in viewModel.conditionMetrics {
+            conditionDictionary[metric] = (tableView.cellForRow(at: IndexPath(row: metric.rawValue, section: 0)) as? ConditionMetricCell)?.metricField.text
+        }
+        
+       // PersistentSettings.conditions 
     }
 
 }

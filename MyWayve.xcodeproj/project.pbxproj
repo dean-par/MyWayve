@@ -16,7 +16,7 @@
 		A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449AB2820CBD5F6005F2402 /* Weather.swift */; };
 		A44B3CF01F9C653E00BCBD6A /* Conditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */; };
 		A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */; };
-		A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */; };
+		A44B3CF41F9C6D7200BCBD6A /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B3CF31F9C6D7200BCBD6A /* Direction.swift */; };
 		A456C0D11F8B00B8002EE88E /* MultiDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */; };
 		A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A731F861B1F00C1C7CA /* AppDelegate.swift */; };
 		A4575A761F861B1F00C1C7CA /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4575A751F861B1F00C1C7CA /* SpotViewController.swift */; };
@@ -31,7 +31,7 @@
 		A49599561F9340F20083E5CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49599551F9340F20083E5CD /* Configuration.swift */; };
 		A49F582A1F93737600926FF3 /* GoodConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49F58291F93737600926FF3 /* GoodConditions.storyboard */; };
 		A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */; };
-		A4B291831FA5C463002AFD0C /* StartupSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B291821FA5C463002AFD0C /* StartupSettings.swift */; };
+		A4B291831FA5C463002AFD0C /* PersistentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B291821FA5C463002AFD0C /* PersistentSettings.swift */; };
 		A4CC43DB1FAEE3AC00B76C15 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC43DA1FAEE3AC00B76C15 /* ConditionsViewController.swift */; };
 		A4EAF8E21F9C79A900B2D413 /* DefaultsHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */; };
 		A4EAF8E41F9C7A3A00B2D413 /* PersistentSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */; };
@@ -49,7 +49,7 @@
 		A449AB2820CBD5F6005F2402 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A44B3CEF1F9C653E00BCBD6A /* Conditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conditions.storyboard; sourceTree = "<group>"; };
 		A44B3CF11F9C6BD700BCBD6A /* DirectionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionPickerViewController.swift; sourceTree = "<group>"; };
-		A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypes.swift; sourceTree = "<group>"; };
+		A44B3CF31F9C6D7200BCBD6A /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		A456C0D01F8B00B8002EE88E /* MultiDayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayForecast.swift; sourceTree = "<group>"; };
 		A4575A701F861B1F00C1C7CA /* MyWayve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWayve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4575A731F861B1F00C1C7CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		A49599551F9340F20083E5CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A49F58291F93737600926FF3 /* GoodConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoodConditions.storyboard; sourceTree = "<group>"; };
 		A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
-		A4B291821FA5C463002AFD0C /* StartupSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupSettings.swift; sourceTree = "<group>"; };
+		A4B291821FA5C463002AFD0C /* PersistentSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentSettings.swift; sourceTree = "<group>"; };
 		A4CC43DA1FAEE3AC00B76C15 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
 		A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHandlerType.swift; sourceTree = "<group>"; };
 		A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentSettingsManager.swift; sourceTree = "<group>"; };
@@ -226,10 +226,10 @@
 			children = (
 				A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */,
 				A49599551F9340F20083E5CD /* Configuration.swift */,
-				A44B3CF31F9C6D7200BCBD6A /* WeatherTypes.swift */,
+				A44B3CF31F9C6D7200BCBD6A /* Direction.swift */,
 				A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */,
 				A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */,
-				A4B291821FA5C463002AFD0C /* StartupSettings.swift */,
+				A4B291821FA5C463002AFD0C /* PersistentSettings.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -395,11 +395,11 @@
 			files = (
 				A4449BEF2500DCC50030B995 /* ConditionMetric.swift in Sources */,
 				A487FE001F8E2CF300DCE5D7 /* DateFormatter.swift in Sources */,
-				A44B3CF41F9C6D7200BCBD6A /* WeatherTypes.swift in Sources */,
+				A44B3CF41F9C6D7200BCBD6A /* Direction.swift in Sources */,
 				A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */,
 				A44B3CF21F9C6BD700BCBD6A /* DirectionPickerViewController.swift in Sources */,
 				A449AB2920CBD5F6005F2402 /* Weather.swift in Sources */,
-				A4B291831FA5C463002AFD0C /* StartupSettings.swift in Sources */,
+				A4B291831FA5C463002AFD0C /* PersistentSettings.swift in Sources */,
 				A4449BF52500DEC60030B995 /* ConditionMetricCell.swift in Sources */,
 				A4EAF8E61F9C7A7F00B2D413 /* Condition.swift in Sources */,
 				A4575A931F864FDF00C1C7CA /* ForecastHandler.swift in Sources */,

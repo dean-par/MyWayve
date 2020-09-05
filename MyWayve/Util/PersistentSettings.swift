@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StartupSettings: NSObject {
+class PersistentSettings: NSObject {
     
     static var conditions: [Condition]? {
         get {

@@ -63,17 +63,17 @@ class HourlyForecast {
     }
     
     let windEnergy: Double
-    let windDirection: WeatherTypes.Direction
+    let windDirection: Direction
     let period: Double
     let swellHeight: Double
-    let swellDirection: WeatherTypes.Direction
+    let swellDirection: Direction
     
     init?(withDictionary dictionary: [String : AnyObject]) {
         guard let windEnergy = (dictionary[Property.windEnergy] as? String).flatMap(Double.init),
-            let windDirection = (dictionary[Property.windDirection] as? String).flatMap(WeatherTypes.Direction.init(rawValue:)),
+            let windDirection = (dictionary[Property.windDirection] as? String).flatMap(Direction.init(rawValue:)),
             let period = (dictionary[Property.period] as? String).flatMap(Double.init),
             let swellHeight = (dictionary[Property.swellHeight] as? String).flatMap(Double.init),
-            let swellDirection = (dictionary[Property.swellDirection] as? String).flatMap(WeatherTypes.Direction.init(rawValue:))
+            let swellDirection = (dictionary[Property.swellDirection] as? String).flatMap(Direction.init(rawValue:))
             else { return nil }
         self.windEnergy = windEnergy
         self.windDirection = windDirection

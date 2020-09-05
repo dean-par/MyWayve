@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ConditionMetric: String, CaseIterable {
+enum ConditionMetric: Int, CaseIterable {
     case location
     case waveHeightMin
     case waveHeightMax
@@ -16,6 +16,10 @@ enum ConditionMetric: String, CaseIterable {
     case periodMax
     case swellDirection
     case windDirection
+    
+    var key: String {
+        String(describing: self)
+    }
     
     var title: String {
         switch self {

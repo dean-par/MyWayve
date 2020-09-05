@@ -37,13 +37,13 @@ class ConditionsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return StartupSettings.conditions?.count ?? 0
+        return PersistentSettings.conditions?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.condition, for: indexPath)
-        if let conditions = StartupSettings.conditions,
+        if let conditions = PersistentSettings.conditions,
             let condition = conditions[indexPath.row] as? Condition {
             cell.textLabel?.text = condition.spot
             cell.detailTextLabel?.text = condition.spot
