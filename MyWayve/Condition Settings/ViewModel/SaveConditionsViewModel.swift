@@ -16,4 +16,15 @@ class SaveConditionsViewModel {
     var numberOfRows: Int {
         conditionMetrics.count
     }
+    
+    func saveCondition(dictionary: [ConditionMetric: String]) {
+        let condition = Condition(spot: dictionary[ConditionMetric.location] ?? "",
+                                  waveHeightMin: dictionary[ConditionMetric.waveHeightMax] ?? "",
+                                  waveHeightMax: dictionary[ConditionMetric.waveHeightMin] ?? "",
+                                  periodMin: dictionary[ConditionMetric.periodMin] ?? "",
+                                  periodMax: dictionary[ConditionMetric.periodMax] ?? "",
+                                  swellDirection: Direction(rawValue: dictionary[ConditionMetric.swellDirection] ?? ""),
+                                  windDirection: Direction(rawValue:dictionary[ConditionMetric.windDirection] ?? ""))
+        PersistentSettings.conditions = condition
+    }
 }

@@ -10,19 +10,17 @@ import Foundation
 
 class PersistentSettings: NSObject {
     
-    static var conditions: [Condition]? {
+    static var conditions: Condition? {
         get {
-            let savedData = PersistentSettingsManager.array(for: .condition).flatMap { $0 as? [Data] }
-            return savedData?.flatMap { NSKeyedUnarchiver.unarchiveObject(with: $0) as? Condition }
+            guard let savedPerson = UserDefaults.standard.object(forKey: "condition") as? Data else { return nil }
+            let decoder = JSONDecoder()
+            return try? decoder.decode(Condition.self, from: savedPerson)
         }
         set {
-            if let conditions = newValue {
-                let conditionsData = conditions.map(NSKeyedArchiver.archivedData(withRootObject:))
-                PersistentSettingsManager.setValue(conditionsData as AnyObject, for: .condition)
-            } else {
-                PersistentSettingsManager.deleteValue(.condition)
+            let encoder = JSONEncoder()
+            if let data = try? encoder.encode(newValue) {
+                UserDefaults.standard.set(data, forKey: "condition")
             }
         }
     }
-    
 }

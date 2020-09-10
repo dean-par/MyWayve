@@ -22,6 +22,16 @@ struct Condition: Codable {
     private enum CodingKeys: CodingKey {
         case spot, waveHeightMin, waveHeightMax, periodMin, periodMax, swellDirection, windDirection
     }
+    
+    init(spot: String, waveHeightMin: String, waveHeightMax: String, periodMin: String, periodMax: String, swellDirection: Direction?, windDirection: Direction?) {
+        self.spot = spot
+        self.waveHeightMin = waveHeightMin
+        self.waveHeightMax = waveHeightMax
+        self.periodMin = periodMin
+        self.periodMax = periodMax
+        self.swellDirection = swellDirection
+        self.windDirection = windDirection
+    }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

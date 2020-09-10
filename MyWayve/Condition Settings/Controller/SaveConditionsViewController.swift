@@ -38,8 +38,7 @@ class SaveConditionsViewController: UITableViewController {
         for metric in viewModel.conditionMetrics {
             conditionDictionary[metric] = (tableView.cellForRow(at: IndexPath(row: metric.rawValue, section: 0)) as? ConditionMetricCell)?.metricField.text
         }
-        
-       // PersistentSettings.conditions 
+        viewModel.saveCondition(dictionary: conditionDictionary)
     }
 
 }

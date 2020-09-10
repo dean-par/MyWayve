@@ -37,16 +37,15 @@ class ConditionsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PersistentSettings.conditions?.count ?? 0
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.condition, for: indexPath)
-        if let conditions = PersistentSettings.conditions,
-            let condition = conditions[indexPath.row] as? Condition {
-            cell.textLabel?.text = condition.spot
-            cell.detailTextLabel?.text = condition.spot
+        if let conditions = PersistentSettings.conditions {
+            cell.textLabel?.text = conditions.spot
+            cell.detailTextLabel?.text = conditions.waveHeightMax
         }
         return cell
     }

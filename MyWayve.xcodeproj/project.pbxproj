@@ -33,7 +33,6 @@
 		A4A38CE11F8C8D7A002A4EF1 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */; };
 		A4B291831FA5C463002AFD0C /* PersistentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B291821FA5C463002AFD0C /* PersistentSettings.swift */; };
 		A4CC43DB1FAEE3AC00B76C15 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC43DA1FAEE3AC00B76C15 /* ConditionsViewController.swift */; };
-		A4EAF8E21F9C79A900B2D413 /* DefaultsHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */; };
 		A4EAF8E41F9C7A3A00B2D413 /* PersistentSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */; };
 		A4EAF8E61F9C7A7F00B2D413 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAF8E51F9C7A7F00B2D413 /* Condition.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 		A4A38CE01F8C8D7A002A4EF1 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		A4B291821FA5C463002AFD0C /* PersistentSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentSettings.swift; sourceTree = "<group>"; };
 		A4CC43DA1FAEE3AC00B76C15 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
-		A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHandlerType.swift; sourceTree = "<group>"; };
 		A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentSettingsManager.swift; sourceTree = "<group>"; };
 		A4EAF8E51F9C7A7F00B2D413 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		E829DFBEDAC18C820ADC8476 /* Pods-MyWayve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWayve.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWayve/Pods-MyWayve.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				A487FDFF1F8E2CF300DCE5D7 /* DateFormatter.swift */,
 				A49599551F9340F20083E5CD /* Configuration.swift */,
 				A44B3CF31F9C6D7200BCBD6A /* Direction.swift */,
-				A4EAF8E11F9C79A900B2D413 /* DefaultsHandlerType.swift */,
 				A4EAF8E31F9C7A3A00B2D413 /* PersistentSettingsManager.swift */,
 				A4B291821FA5C463002AFD0C /* PersistentSettings.swift */,
 			);
@@ -408,7 +405,6 @@
 				A4EAF8E41F9C7A3A00B2D413 /* PersistentSettingsManager.swift in Sources */,
 				A4575A8E1F86445500C1C7CA /* Tide.swift in Sources */,
 				A4CC43DB1FAEE3AC00B76C15 /* ConditionsViewController.swift in Sources */,
-				A4EAF8E21F9C79A900B2D413 /* DefaultsHandlerType.swift in Sources */,
 				A49599561F9340F20083E5CD /* Configuration.swift in Sources */,
 				A4575A741F861B1F00C1C7CA /* AppDelegate.swift in Sources */,
 				A4449BF12500DD9E0030B995 /* SaveConditionsViewModel.swift in Sources */,
